@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class bai6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String str = "";
+        String string = "";
         int[] arr = null;
 
         while (true) {
@@ -35,24 +35,24 @@ public class bai6 {
                         switch (strChoice) {
                             case 1:
                                 System.out.print("Nhập chuỗi: ");
-                                str = scanner.nextLine();
+                                string = scanner.nextLine();
                                 break;
 
                             case 2:
-                                if (str.isEmpty()) {
+                                if (string.isEmpty()) {
                                     System.out.println("Vui lòng nhập chuỗi trước!");
                                 } else {
-                                    str = str.trim().replaceAll("\\s+", " ");
-                                    System.out.println("Chuỗi sau khi xử lý: " + str);
+                                    string = string.trim().replaceAll("\\s+", " ");
+                                    System.out.println("Chuỗi sau khi xử lý: " + string);
                                 }
                                 break;
 
                             case 3:
-                                if (str.isEmpty()) {
+                                if (string.isEmpty()) {
                                     System.out.println("Vui lòng nhập chuỗi trước!");
                                 } else {
                                     int[] count = new int[256];
-                                    for (char c : str.toCharArray()) {
+                                    for (char c : string.toCharArray()) {
                                         count[c]++;
                                     }
                                     for (int i = 0; i < 256; i++) {
@@ -64,10 +64,10 @@ public class bai6 {
                                 break;
 
                             case 4:
-                                if (str.isEmpty()) {
+                                if (string.isEmpty()) {
                                     System.out.println("Vui lòng nhập chuỗi trước!");
                                 } else {
-                                    String[] words = str.toLowerCase().split("\\s+");
+                                    String[] words = string.toLowerCase().split("\\s+");
                                     StringBuilder result = new StringBuilder();
                                     for (String word : words) {
                                         if (word.length() > 0) {
@@ -75,8 +75,8 @@ public class bai6 {
                                                     .append(word.substring(1)).append(" ");
                                         }
                                     }
-                                    str = result.toString().trim();
-                                    System.out.println("Chuỗi sau khi chuẩn hóa: " + str);
+                                    string = result.toString().trim();
+                                    System.out.println("Chuỗi sau khi chuẩn hóa: " + string);
                                 }
                                 break;
 
